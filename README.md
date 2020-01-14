@@ -1,11 +1,24 @@
 # Ivrenditech
+# IWI (Ivrendi Web Interface)
 
-This project was generated using [Nx](https://nx.dev).
+Angular & NestJS full stack application
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+# Quick Start
+Run `npm install` to install dependencies
+Run `npm start iwi` to start iwi frontend in dev mode
+Run `npm start api` to start iwi api backend in dev mode
+
+Run `ng g @nrwl/angular:app my-app` to generate angular app
+Run `ng g @nrwl/nest:app my-api` to generate nest app
+
+Run `ng g @nrwl/angular:library my-app-lib` to generate angular library
+Run `ng g @nrwl/nest:library my-api-lib` to generate nest library
+
+
+# Learn More
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
-
+This project was generated using [Nx](https://nx.dev).
 ## Quick Start & Documentation
 
 [Nx Documentation](https://nx.dev/angular)
