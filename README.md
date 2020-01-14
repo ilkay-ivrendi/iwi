@@ -14,7 +14,6 @@ Run `ng g @nrwl/nest:app my-api` to generate nest app
 Run `ng g @nrwl/angular:library my-app-lib` to generate angular library
 Run `ng g @nrwl/nest:library my-api-lib` to generate nest library
 
-test
 # Learn More
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
