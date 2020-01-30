@@ -200,6 +200,37 @@
           }
         }
       }
+    },
+    "iwi-ui": {
+      "projectType": "library",
+      "root": "libs/iwi-ui",
+      "sourceRoot": "libs/iwi-ui/src",
+      "prefix": "ivrenditech",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/iwi-ui/tsconfig.lib.json",
+              "libs/iwi-ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/iwi-ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/iwi-ui/jest.config.js",
+            "tsConfig": "libs/iwi-ui/tsconfig.spec.json",
+            "setupFile": "libs/iwi-ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ivrenditech/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@ivrenditech/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@ivrenditech/iwi-ui": ["libs/iwi-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

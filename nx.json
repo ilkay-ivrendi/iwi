@@ -22,6 +22,9 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "iwi-ui": {
+      "tags": []
     }
   }
 }
