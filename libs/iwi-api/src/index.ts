@@ -1,1 +1,1 @@
-export * from './lib/iwi-api';
+export * from './lib/iwi-api.module';
