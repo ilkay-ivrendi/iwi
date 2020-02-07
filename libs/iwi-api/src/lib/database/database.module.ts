@@ -13,10 +13,9 @@ import { UsersModule } from '../users/users.module';
       password: 'password',
       database: 'test',
       entities: [User],
-      synchronize: true
-    }),
-    UsersModule
+      synchronize: false
+    })
   ],
-  exports: [UsersModule]
+  exports: []
 })
 export class DatabaseModule {}

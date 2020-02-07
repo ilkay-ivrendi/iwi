@@ -1,4 +1,9 @@
-import { Connection, Repository, EntityRepository } from 'typeorm';
+import {
+  Connection,
+  Repository,
+  EntityRepository,
+  createConnection
+} from 'typeorm';
 import { User } from './user.entity';
 import { UserDto } from './user.dto';
 
