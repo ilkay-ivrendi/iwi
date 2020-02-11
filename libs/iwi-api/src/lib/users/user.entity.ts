@@ -1,34 +1,49 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Table, Column, Model , DataType } from 'sequelize-typescript';
 
-@Entity({ name: 'Users' })
-export class User {
-  @PrimaryGeneratedColumn()
+@Table
+export class Users extends Model<Users> {
+  @Column
   id: number;
 
-  @Column()
+  @Column
   userName: string;
 
-  @Column()
+  @Column
   firstName: string;
 
-  @Column()
+  @Column
   password: string;
 
-  @Column()
+  @Column
   lastName: string;
 
-  @Column()
+  @Column
   age?: number;
 
-  @Column({
-    type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP',
-  })
+  @Column
   createdAt?: string;
 
-  @Column({
-    type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP',
-  })
+  @Column
   updatedAt?: string;
 }
+
+Users.init({
+  // Model attributes are defined here
+  id: {
+    type: DataType.UUIDV4,
+    primaryKey: true,
+    allowNull: false
+  },
+  firstName: {
+    type: DataType.STRING,
+    allowNull: false
+  },
+  lastName: {
+    type: DataType.STRING
+    // allowNull defaults to true
+  }
+}, {
+  // Other model options go here
+  sequelize, // We need to pass the connection instance
+  modelName: 'User' // We need to choose the model name
+});

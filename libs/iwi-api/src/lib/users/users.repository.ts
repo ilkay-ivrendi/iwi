@@ -4,11 +4,11 @@ import {
   EntityRepository,
   createConnection
 } from 'typeorm';
-import { User } from './user.entity';
+import { Users } from './user.entity';
 import { UserDto } from './user.dto';
 
-@EntityRepository(User)
-export class UserRepository extends Repository<User> {
+@EntityRepository(Users)
+export class UserRepository extends Repository<Users> {
   createUser = async (userDto: UserDto) => {
     return await this.save(userDto);
   };

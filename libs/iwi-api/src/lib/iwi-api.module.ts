@@ -4,6 +4,7 @@ import { UsersModule } from './users/users.module';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [AuthModule, UsersModule, DatabaseModule]
+  imports: [DatabaseModule, AuthModule, UsersModule],
+  exports: [DatabaseModule]
 })
 export class iwiApiModule {}
