@@ -1,14 +1,30 @@
-import { Table, Column, Model , DataType } from 'sequelize-typescript';
+import {
+  Table,
+  Column,
+  Model,
+  PrimaryKey,
+  DataType,
+  AutoIncrement
+} from 'sequelize-typescript';
 
-@Table
+@Table({
+  timestamps: false,
+  tableName: 'Users'
+})
 export class Users extends Model<Users> {
+  @PrimaryKey
+  @AutoIncrement
   @Column
   id: number;
 
-  @Column
+  @Column({
+    type: DataType.STRING
+  })
   userName: string;
 
-  @Column
+  @Column({
+    type: DataType.STRING
+  })
   firstName: string;
 
   @Column
@@ -20,30 +36,13 @@ export class Users extends Model<Users> {
   @Column
   age?: number;
 
-  @Column
-  createdAt?: string;
+  @Column({
+    type: DataType.DATE
+  })
+  createdAt?: Date;
 
-  @Column
-  updatedAt?: string;
+  @Column({
+    type: DataType.DATE
+  })
+  updatedAt?: Date;
 }
-
-Users.init({
-  // Model attributes are defined here
-  id: {
-    type: DataType.UUIDV4,
-    primaryKey: true,
-    allowNull: false
-  },
-  firstName: {
-    type: DataType.STRING,
-    allowNull: false
-  },
-  lastName: {
-    type: DataType.STRING
-    // allowNull defaults to true
-  }
-}, {
-  // Other model options go here
-  sequelize, // We need to pass the connection instance
-  modelName: 'User' // We need to choose the model name
-});

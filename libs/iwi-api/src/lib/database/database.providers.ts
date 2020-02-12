@@ -14,16 +14,15 @@ export const databaseProviders = [
         username: configService.get('TYPEORM_USERNAME'),
         password: configService.get('TYPEORM_PASSWORD'),
         database: configService.get('TYPEORM_DATABASE'),
-        sync: configService.get('TYPEORM_SYNCHRONIZE'),
-        logging: configService.get('TYPEORM_LOGGING')
+        sync: configService.get('TYPEORM_SYNCHRONIZE')
       });
       sequelize.addModels([Users]);
-      await sequelize.sync();
+      await sequelize.sync({ force: true });
       try {
         await sequelize.authenticate();
         const jane =  Users.create({ firstName: "Jane", lastName: "Doe" });
-        console.log('Connection has been established successfully.');
-        console.log("Jane's auto-generated ID:", jane.get('id'));
+        const john =  Users.create({ firstName: "John", lastName: "Doew" });
+        console.log((await john).id, (await jane).id);
       } catch (error) {
         console.error('Unable to connect to the database:', error);
       }
