@@ -1,4 +1,4 @@
-<div fxFlex>
+<div fxFlexFill fxLayout="column">
   <mat-sidenav-container fxFill>
     <mat-sidenav
       #sidenav
@@ -77,7 +77,7 @@
       </mat-toolbar>
       <!-- <router-outlet></router-outlet> -->
 
-      <div style="text-align:center">
+      <div fxFlexFill fxLayout="column">
         <h1>Welcome to iwi!</h1>
       </div>
       <div>Message: {{ hello$ | async | json }}</div>
