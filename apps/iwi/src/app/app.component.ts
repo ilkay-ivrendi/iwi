@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@ivrenditech/api-interfaces';
+import { Message } from '@iwi/api-interfaces';
 
 @Component({
-  selector: 'ivrenditech-root',
+  selector: 'iwi-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

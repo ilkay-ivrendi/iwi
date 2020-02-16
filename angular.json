@@ -10,7 +10,7 @@
       },
       "root": "apps/iwi",
       "sourceRoot": "apps/iwi/src",
-      "prefix": "ivrenditech",
+      "prefix": "iwi",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -286,7 +286,7 @@
       "projectType": "library",
       "root": "libs/iwi-ui",
       "sourceRoot": "libs/iwi-ui/src",
-      "prefix": "ivrenditech",
+      "prefix": "iwi",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",

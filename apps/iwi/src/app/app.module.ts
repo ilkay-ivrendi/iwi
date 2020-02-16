@@ -4,12 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { iwiUIModule } from '@ivrenditech/iwi-ui';
-import { IonicModule } from '@ionic/angular';
+import { iwiUIModule } from '@iwi/iwi-ui';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, iwiUIModule, IonicModule.forRoot() ],
+  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule, iwiUIModule ],
   providers: [],
   bootstrap: [AppComponent]
 })
